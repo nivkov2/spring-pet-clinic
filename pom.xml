@@ -41,8 +41,8 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:nivkov2/spring-pet-clinic.git</developerConnection>
-      <tag>spring-pet-clinic-0.0.1</tag>
+        <developerConnection>scm:git:https://github.com/nivkov2/spring-pet-clinic.git</developerConnection>
+      <tag>spring-pet-clinic-0.0.2</tag>
   </scm>
 
     <repositories>
