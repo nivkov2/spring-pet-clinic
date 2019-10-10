@@ -35,6 +35,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
                     <goals>install</goals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
             </plugin>
         </plugins>
@@ -42,8 +43,8 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/nivkov2/spring-pet-clinic.git</developerConnection>
-      <tag>spring-pet-clinic-0.0.2</tag>
-  </scm>
+      <tag>spring-pet-clinic-0.0.1</tag>
+    </scm>
 
     <repositories>
         <repository>
