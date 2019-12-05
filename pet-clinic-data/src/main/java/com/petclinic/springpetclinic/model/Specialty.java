@@ -6,11 +6,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Getter
 @Setter
-@Builder
-@AllArgsConstructor
+@Getter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "specialties")
 public class Specialty extends BaseEntity {

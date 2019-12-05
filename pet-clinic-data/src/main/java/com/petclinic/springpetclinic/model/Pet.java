@@ -8,9 +8,8 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-@Getter
 @Setter
-@Builder
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -35,4 +34,16 @@ public class Pet extends BaseEntity {
     @Column(name = "visits")
     private Set<Visit> visits = new HashSet<>();
 
+    @Builder
+    public Pet(Long id, String name, PetType petType, Owner owner, LocalDate birthDate, Set<Visit> visits) {
+        super(id);
+        this.name = name;
+        this.petType = petType;
+        this.owner = owner;
+        this.birthDate = birthDate;
+
+        if (visits == null || visits.size() > 0 ) {
+            this.visits = visits;
+        }
+    }
 }

@@ -1,9 +1,6 @@
 package com.petclinic.springpetclinic.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +10,8 @@ import java.io.Serializable;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @MappedSuperclass
 public class BaseEntity implements Serializable {
 
@@ -20,8 +19,7 @@ public class BaseEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public boolean isNew(){
+    public boolean isNew() {
         return this.id == null;
     }
-
 }

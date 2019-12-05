@@ -5,8 +5,11 @@ import lombok.*;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Getter
 @Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "visits")
 public class Visit extends BaseEntity {
@@ -20,4 +23,9 @@ public class Visit extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "pet_id")
     private Pet pet;
+
+    public LocalDate getDate() {
+        return date;
+    }
+
 }
