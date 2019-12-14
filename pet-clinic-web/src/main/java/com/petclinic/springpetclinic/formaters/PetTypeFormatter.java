@@ -4,7 +4,6 @@ import com.petclinic.springpetclinic.model.PetType;
 import com.petclinic.springpetclinic.services.PetTypeService;
 import org.springframework.format.Formatter;
 import org.springframework.stereotype.Component;
-import sun.misc.Contended;
 
 import java.text.ParseException;
 import java.util.Collection;
