@@ -29,9 +29,13 @@ jobs:
             - v1-dependencies-{{ checksum "pom.xml" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      - run: mvn install -DskipTests
-      - run: mvn cobertura:cobertura
-      - run: bash <(curl -s https://codecov.io/bash)
+      - run: mvn install
+      - run: mvn dependency:go-offline
+      - store_artifacts:
+          path:  target
+      - codecov/upload:
+          file: target/jacoco.exec
+#      - run: bash <(curl -s https://codecov.io/bash)
 
       - save_cache:
           paths:
